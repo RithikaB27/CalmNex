@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmNex:Together in Tranquility</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>CalmNex:Together in Tranquility</h1>
+            <nav>
+               <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="myprofile/index.html">Fitness</a></li>
+                <li><a href="BMI/index.html">BMI</a></li>
+                <li><a href="message/index.html">Messages</a></li>
+                <li><a href="posts/index.html">Posts</a></li>
+                <li><a href="aboutus/index.html">About Us</a></li>
+               </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <img src="image.png">
+        </section>
+        <h1>Why Choose CalmNex?</h1>
+        <div><p>
+            CalmNex offers a supportive online community where individuals facing mental and physical health challenges can find understanding and encouragement. With empowering tools for managing health habits and personalized user experiences, CalmNex provides curated resources ranging from inspirational videos to practical health tips. Our commitment to privacy and security ensures a safe environment for sharing personal experiences, while continuous improvement based on user feedback guarantees that CalmNex evolves to meet the needs of its community. Immediate assistance is always available through helpline numbers, making CalmNex the ideal choice for those seeking a caring and supportive space to navigate their health journey.
+        </p></div>
+        <h1>Inspirational Videos</h1>
+        <div class="youtube-container">
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/DxIDKZHW3-E" title="We All Have Mental Health" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/LbYklWmdvb8" title="Overcoming Inferiority | Joyce Meyer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/kvtYjdriSpM" title="Two Easily Remembered Questions That Silence Negative Thoughts | Anthony Metivier | TEDxDocklands" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/KTg9WYLY-oM" title="Treating depression and anxiety in young people: does reducing repetitive negative thinking help?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/55BQVEjCqhU" title="Change Automatic Negative Thoughts (ANTs) - Daniel Amen, M.D." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <h1>What's New?</h1>
+        <div>
+            <img src="facts1.png" alt="Fact 1">
+            <div class="facts-container">
+                <img src="fact5.png" alt="Fact 3">
+                <img src="facts2.png" alt="Fact 2">
+                <img src="facts3.png" alt="Fact 4">
+            </div>
+            <h1>News Paper Articles</h1>
+            <div class="articles">
+                <img src="article1.png" alt="Article 1">
+                <img src="article5.png" alt="Article 2">
+                <img src="article3.png" alt="Article 3">
+            </div>
+        </div>
+        <h1>Helpline Contact Numbers</h1>
+        <p>
+          1. Emergency Response Support System (ERSS): 112<br>
+          2. Police: 100<br>
+          3. Ambulance: 102<br>
+          4. Women Helpline: 109<br>
+          5. Child Helpline: 1098<br>
+          6. Aids helpline: 1097<br>
+          7. Anti-poison: 1066 or 011-1066<br>
+          8. TELE MANAS: 14416<br>
+        </p>
+        <h1>Rate Us</h1>
+        <div class="rating-container">
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5">
+              <label for="star5">&#9733;</label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4">&#9733;</label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3">&#9733;</label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2">&#9733;</label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1">&#9733;</label>
+            </div>
+            <button id="submitRating">Submit Rating</button>
+          </div>          
+          <script>
+           const stars = document.querySelectorAll('.rating input');
+const submitButton = document.getElementById('submitRating');
+
+stars.forEach(star => star.addEventListener('change', function() {
+  stars.forEach(s => {
+    if (s.checked) {
+      s.parentNode.querySelector('label').classList.add('checked');
+    } else {
+      s.parentNode.querySelector('label').classList.remove('checked');
+    }
+  });
+}));
+
+submitButton.addEventListener('click', function() {
+  const selectedRating = document.querySelector('.rating input:checked');
+  if (selectedRating) {
+    const ratingValue = selectedRating.value;
+    alert('Rating submitted: ' + ratingValue);
+    // Here you can send the rating to the server or perform any other action.
+  } else {
+    alert('Please select a rating before submitting.');
+  }
+});
+          </script><br><br> 
+          <h1>Feedback Form</h1><center><a href="https://docs.google.com/forms/d/e/1FAIpQLScul1imzVPQsGHshMLoZ25kF3_vW9D5eBccx_FbFnU3Yj-kkg/viewform" class="feedback">Click Here</a></center>       
+    </main><br><br>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <div class="logo"><img src="calmnex_logo.png" alt="CalmNex Logo"/></div>
+            <p>Contact Us: <a href="#">CalmNex@gmail.com</a></p>
+          </div>
+          <div class="footer-right">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2024 CalmNex. All Rights Reserved.</p>
+        </div>
+      </footer> 
+</body> 
+</html>

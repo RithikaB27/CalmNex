@@ -1,0 +1,88 @@
+/* style.css */
+
+/* Styles for the post button */
+.post-button {
+    background-color: #F39C12; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .post-button:hover {
+    background-color: #F39C12; /* Darker green */
+  } 
+  /* Styles for the posts container */
+  .posts-container {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Styles for individual posts */
+  .post {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    flex: 1 0 30%; /* Adjust this value as needed */
+  }
+  
+  .post img,
+  .post audio,
+  .post video {
+    max-width: 100%;
+    display: block;
+  }
+  .post-form{
+    text-align: center;
+  }
+  h2{
+    font-size:40px;
+    color:#F39C12;
+  }
+  /* style.css */
+
+/* Styles for the post button */
+.post-button {
+  background-color:  #F39C12; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.post-button:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+/* Styles for the posts container */
+.posts-container {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Styles for individual posts */
+.post {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  flex: 1 0 30%; /* Adjust this value as needed */
+}
+
+.post img,
+.post audio,
+.post video {
+  max-width: 100%;
+  display: block;
+}

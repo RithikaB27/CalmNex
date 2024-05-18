@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Post Content</title>
+  <style>
+    .post-form {
+      margin: 20px;
+    }
+
+    #fileInput {
+      margin-bottom: 10px;
+    }
+
+    .posts-container {
+      margin: 20px;
+    }
+
+    .post {
+      margin-bottom: 20px;
+    }
+
+    .post img, .post audio, .post video {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="post-form">
+    <h2>Create a Post</h2>
+    <input type="file" id="fileInput" accept="image/*, audio/*, video/*">
+    <button onclick="uploadFile()" class="post-button">Post</button>
+  </div>
+
+  <div class="posts-container" id="postsContainer">
+    <!-- Posts will be displayed here -->
+  </div>
+
+  <script>
+    // Function to upload files and store them locally
+    function uploadFile() {
+      const fileInput = document.getElementById('fileInput');
+      const files = fileInput.files;
+
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const reader = new FileReader();
+
+        reader.onload = function(event) {
+          const postContainer = document.getElementById('postsContainer');
+          const postElement = document.createElement('div');
+          postElement.classList.add('post');
+
+          if (file.type.startsWith('image')) {
+            const imgElement = document.createElement('img');
+            imgElement.src = event.target.result;
+            postElement.appendChild(imgElement);
+          } else if (file.type.startsWith('audio')) {
+            const audioElement = document.createElement('audio');
+            audioElement.controls = true;
+            audioElement.src = event.target.result;
+            postElement.appendChild(audioElement);
+          } else if (file.type.startsWith('video')) {
+            const videoElement = document.createElement('video');
+            videoElement.controls = true;
+            videoElement.src = event.target.result;
+            postElement.appendChild(videoElement);
+          }
+
+          postContainer.appendChild(postElement);
+
+          // Store the file data locally
+          localStorage.setItem('post_' + i, event.target.result);
+        };
+
+        reader.readAsDataURL(file);
+      }
+    }
+
+    // Function to load posts from local storage when the page loads
+    window.onload = function() {
+      const postContainer = document.getElementById('postsContainer');
+
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('post_')) {
+          const postElement = document.createElement('div');
+          postElement.classList.add('post');
+
+          const dataType = key.split('_')[1];
+          if (dataType === 'image') {
+            const imgElement = document.createElement('img');
+            imgElement.src = localStorage.getItem(key);
+            postElement.appendChild(imgElement);
+          } else if (dataType === 'audio') {
+            const audioElement = document.createElement('audio');
+            audioElement.controls = true;
+            audioElement.src = localStorage.getItem(key);
+            postElement.appendChild(audioElement);
+          } else if (dataType === 'video') {
+            const videoElement = document.createElement('video');
+            videoElement.controls = true;
+            videoElement.src = localStorage.getItem(key);
+            postElement.appendChild(videoElement);
+          }
+
+          postContainer.appendChild(postElement);
+        }
+      }
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* Centering the contents */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Styling the buttons */
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.active {
+  background-color: darkorange;
+}
+
+button:hover {
+  background-color: #ff9900;
+}
+
+/* Styling the form */
+form {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/* Styling the error message */
+.error {
+  color: pink;
+  margin-top: 5px;
+}
+

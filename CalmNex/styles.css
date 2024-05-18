@@ -1,0 +1,279 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    background-color: #F39C12;
+    color: #fff;
+  }
+  
+  header .container {
+    width: 100%;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size : 3rem;
+  }
+  
+  header nav {
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    margin-top: 1%;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav li {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  img{
+    height:100%;
+    width:100%;
+}
+  .youtube-container {
+    display:flex;
+  }
+  .facts-container {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 33%;
+    height: 60%; /* Increased the height to fit all the fact images */
+  }
+  
+  .facts-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Add custom styling for each image as needed */
+  .facts-container img:nth-child(1) {
+    grid-column: span 3; /* Make the first image span all three columns */
+  }
+  
+  .facts-container img:nth-child(2) {
+    grid-row: 2; /* Move the second image to the second row */
+  }
+  
+  .facts-container img:nth-child(3) {
+    grid-column: 1 / span 2; /* Make the third image span two columns */
+  }
+  
+  .facts-container img:nth-child(4) {
+    grid-column: 3; /* Place the fourth image in the third column */
+  }
+  
+  .facts-container img:nth-child(5) {
+    grid-column: 1 / span 2; /* Make the fifth image span two columns */
+    grid-row: 2; /* Place the fifth image in the second row */
+  }
+  
+  .facts-container img:nth-child(6) {
+    grid-column: 3; /* Place the sixth image in the third column */
+    grid-row: 2; /* Place the sixth image in the second row */
+  }
+  footer {
+    background-color: #F39C12;
+    padding: 20px 0;
+    display: flex; /* Arrange footer content in a row */
+    justify-content: space-between; /* Spread content evenly */
+    align-items: center; /* Align content vertically */
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-top:1%;
+  }
+  
+  .footer-container {
+    display: flex;
+    width: 100%; /* Make the container take up the full width */
+  }
+  
+  .footer-left {
+    flex: 1; /* Make the left section flexible */
+  }
+  
+  .footer-right {
+    text-align: right; /* Align right content to the right */
+  }
+  
+  .footer-left a,
+  .footer-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0%;
+  }
+  
+  .social-media {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-media li {
+    margin-left: 10px; /* Add spacing between icons */
+  }
+  
+  .social-media i {
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    border-top: 1px solid #ddd;
+  }
+  
+  .copyright p {
+    margin: 0;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+  }
+  footer p{
+    color:#fff;
+  }
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .fa-instagram {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+  body p{
+    font-size:1.5rem;
+  }
+  .logo{
+    width:40%;
+    height:50%;
+  }
+  .articles {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 33%;
+    height: 60%;
+    padding-bottom: 1%; /* Increased the height to fit all the article images */
+  }
+  
+  .articles img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Add custom styling for each image as needed */
+  .articles img:nth-child(1) {
+    grid-column: span 3; /* Make the first image span all three columns */
+  }
+  
+  .articles img:nth-child(2) {
+    grid-row: 2; /* Move the second image to the second row */
+  }
+  
+  .articles img:nth-child(3) {
+    grid-column: 1 / span 2; /* Make the third image span two columns */
+  }
+  
+  .articles img:nth-child(4) {
+    grid-column: 3; /* Place the fourth image in the third column */
+  }
+  
+  .articles img:nth-child(5) {
+    grid-column: 1 / span 2; /* Make the fifth image span two columns */
+    grid-row: 2; /* Place the fifth image in the second row */
+  }
+  body h1{
+    font-size:3rem;
+    text-align:center;
+  }
+  .rating-container {
+    position: relative; /* Set the container to a relative position */
+    margin-bottom: 20px;
+  }
+  
+  .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    font-size: 2em;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .rating input:checked ~ label {
+    color: #ffc700;
+  }
+  
+  #submitRating {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Position the button absolutely */
+    bottom: -40px; /* Adjust bottom spacing */
+    left: 50%; /* Align horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+  }
+  .feedback{
+    font-size:1.5rem;
+  }
+  h1{
+    font-family: 'Roboto', sans-serif;
+    font-size:36px;
+    font-style:bold;
+    align-items: center;
+  }
+  p{
+    font-family: 'Roboto', sans-serif;
+    font-size:16px;
+    align-items: left;
+
+  }

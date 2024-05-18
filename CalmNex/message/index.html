@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Chat</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .header {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="h-screen w-screen flex flex-col justify-between">
+        <div class="header">
+            <p>Welcome to the chatroom. Connect with people anonymously.</p>
+        </div>
+        <div id="chat" class="p-3 overflow-auto">
+        </div>
+        <div class="flex">
+            <input id="name" type="text" class="px-3 w-full border-t border-gray-300 outline-none text-gray-700" placeholder="Your name..." />
+            <input id="message" type="text" class="px-3 w-full border-t border-gray-300 outline-none text-gray-700" placeholder="Type your message..." />
+            <button style="width: 100px; height: 40px; background-color: orange; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const ws = new WebSocket("ws://localhost:3000");
+
+        ws.addEventListener("message", function(event) {
+            const data = JSON.parse(event.data);
+
+            if (data.type === "message") {
+                addMessage(data.name + ": " + data.message); // Update here to access 'name' and 'message' properties
+            }
+        });
+
+        function sendMessage() {
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+
+            if (!name || !message) return false;
+
+            ws.send(JSON.stringify({ type: "message", name: name, message: message }));
+
+            document.getElementById("message").value = "";
+        }
+
+        function addMessage(message) {
+            const node = document.createElement("p");
+            const text = document.createTextNode(message);
+
+            node.appendChild(text);
+            node.classList.add("text-gray-700", "py-1");
+
+            document.getElementById("chat").appendChild(node);
+        }
+    </script>
+</body>
+</html>
