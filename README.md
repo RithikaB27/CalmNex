@@ -36,6 +36,7 @@ CalmNex is built to create a supportive and engaging community for individuals w
 - **CSS**: For styling the web pages.
 - **JavaScript**: For adding interactivity to the web application.
 ## File Structure
+```bash
 calmnex/
 │
 ├── aboutus/
@@ -59,5 +60,6 @@ calmnex/
 ├── image.png
 ├── styles.css
 └── _redirects
+```
 ## License
 This project is open for personal and educational use.
